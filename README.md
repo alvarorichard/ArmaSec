@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="https://i.imgur.com/9alCwTT.png"alt="Hack Planet" />
+</p>
+
+
+</p>
+
 # Ransomware
 
 **Warning: This ransomware script is for educational purposes only. Do not use it on any unauthorized systems or for any malicious purposes. Use at your own risk.**
