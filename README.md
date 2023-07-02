@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/e7dvAFG.png"alt="Hack Planet" />
+  <img src=https://i.imgur.com/FbzK1uq.png />
 </p>
 
 
