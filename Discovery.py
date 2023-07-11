@@ -13,7 +13,7 @@ def discovery(initial_path):
         'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx',  # microsoft office
         # OpenOffice, Adobe, Latex, Markdown, etc
         'odt', 'odp', 'txt', 'rtf', 'tex', 'pdf', 'epub', 'md',
-        'yml', 'yaml', 'json', 'xml', 'csv',  # dados estruturados e config
+        'yml', 'yaml',  'xml', 'csv',  # dados estruturados e config
         'db', 'sql', 'dbf', 'mdb', 'iso',  # bancos de dados e imagens de discos
 
         'html', 'htm', 'xhtml', 'php', 'asp', 'aspx', 'js', 'jsṕ', 'css'  # tecnologias web

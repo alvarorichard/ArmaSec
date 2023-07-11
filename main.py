@@ -70,6 +70,8 @@ def main():
         # limpa a chave de criptografia da memória
         for _ in range(100):
             pass
+ 
+
 
 
 if __name__ == '__main__':
