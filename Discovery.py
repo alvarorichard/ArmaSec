@@ -25,7 +25,7 @@ def discovery(initial_path):
         'awk', 'sh', 'cgi', 'pl', 'ada', 'swift',  # Scripts de Sistemas Unix
         'go', 'py', 'pyc', 'bf', 'coffee',  # Outros tipos de codigos fontes
 
-        'zip', 'tar', 'tgz', '7z', 'rar', 'bak',  # Arquivos compactados e backups
+        'zip', 'tar', 'tgz', '7z', 'rar', 'bak','deb'  # Arquivos compactados e backups
     ]
 
     for dirpath, dirs, files in os.walk(initial_path):
@@ -39,5 +39,3 @@ if __name__ == '_main_':
     x = discovery(os.getcwd())
     for i in x:
         print(i)
-
-        
