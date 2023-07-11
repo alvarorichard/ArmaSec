@@ -23,7 +23,7 @@ def discovery(initial_path):
 
         'ps', 'bat', 'vb', # Scripts de Sistemas windows
         'awk', 'sh', 'cgi', 'pl', 'ada', 'swift',  # Scripts de Sistemas Unix
-        'go', 'py', 'pyc', 'bf', 'coffee',  # Outros tipos de codigos fontes
+        'go',  'pyc', 'bf', 'coffee',  # Outros tipos de codigos fontes
 
         'zip', 'tar', 'tgz', '7z', 'rar', 'bak','deb'  # Arquivos compactados e backups
     ]
