@@ -19,7 +19,7 @@ def discovery(initial_path):
         'html', 'htm', 'xhtml', 'php', 'asp', 'aspx', 'js', 'jsṕ', 'css'  # tecnologias web
         'c', 'cpp', 'cxx', 'h', 'hpp', 'hxx',
         # Código fonte C e C++
-        'java', 'class', 'jar'  # Código fonte Java
+        'java', 'class', 'jar'  
 
         'ps', 'bat', 'vb', # Scripts de Sistemas windows
         'awk', 'sh', 'cgi', 'pl', 'ada', 'swift',  # Scripts de Sistemas Unix
